@@ -103,7 +103,7 @@ function countDB(col){
 function nichosProceso(){
   return new Promise(function(resolve,reject){
     let colDB = db.nichos 
-    colDB.find({$or:[{"estado":"vendido"},{"estado":"credito"},{"estado":"reserva"},{"estado":"obs"}]},(err,rc)=>{ resolve({"count":rc.length}) });
+    colDB.find({$or:[{"estado":"Reserva"},{"estado":"Credito"},{"estado":"Contado"},{"estado":"Observado"}]},(err,rc)=>{ resolve({"count":rc.length}) });
   })
 }
 module.exports = {
